@@ -37,7 +37,6 @@ public class IncreaseXP : MonoBehaviour
                 delayCount = 0;    
             }
             delayCount +=1;
-
         }
 
        

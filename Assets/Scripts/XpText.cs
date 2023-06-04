@@ -13,11 +13,10 @@ public class XpText : MonoBehaviour
     {
         
     }
-    private string xp = IncreaseXP.xp.ToString();
     // Update is called once per frame
     void Update()
     {
 
-        changingText.text = (xp);
+      
     }
 }
