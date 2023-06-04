@@ -1,4 +1,5 @@
-﻿ using UnityEngine;
+﻿using TMPro;
+using UnityEngine;
 #if ENABLE_INPUT_SYSTEM 
 using UnityEngine.InputSystem;
 #endif
@@ -110,6 +111,9 @@ namespace StarterAssets
 
         private bool _hasAnimator;
 
+        //Speed HUD Text
+        private TextMeshProUGUI speedText;
+
         private bool IsCurrentDeviceMouse
         {
             get
@@ -135,7 +139,8 @@ namespace StarterAssets
         private void Start()
         {
             _cinemachineTargetYaw = CinemachineCameraTarget.transform.rotation.eulerAngles.y;
-            
+            var obj = GameObject.Find("SpeedAmount");
+            speedText = obj.GetComponent<TextMeshProUGUI>();
             _hasAnimator = TryGetComponent(out _animator);
             _controller = GetComponent<CharacterController>();
             _input = GetComponent<StarterAssetsInputs>();
@@ -279,6 +284,9 @@ namespace StarterAssets
                 _animator.SetFloat(_animIDSpeed, _animationBlend);
                 _animator.SetFloat(_animIDMotionSpeed, inputMagnitude);
             }
+
+            //Update HUD Speed
+            this.speedText.text =  this._speed.ToString() + "km/ph";
         }
 
         private void JumpAndGravity()

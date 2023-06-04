@@ -1,12 +1,14 @@
 using StarterAssets;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class SuperSpeed : MonoBehaviour
 {
 
     private ThirdPersonController rb;
+    
     private float superSpeed = 20f;
     private float baseSpeed;
     public TrailRenderer trail;
@@ -19,6 +21,8 @@ public class SuperSpeed : MonoBehaviour
         trail = GetComponent<TrailRenderer>();
         this.baseSpeed = rb.MoveSpeed;
         togglesuperSpeed = false;
+
+     
     }
     
 
