@@ -25,7 +25,7 @@ public class SuperSpeed : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.LeftControl) && IncreaseSpeed.xp >= 0)
+        if (Input.GetKeyDown(KeyCode.LeftControl) && IncreaseXP.xp >= 0)
         {
             this.togglesuperSpeed = this.togglesuperSpeed ? false : true;
             trail.emitting = togglesuperSpeed;
@@ -41,7 +41,7 @@ public class SuperSpeed : MonoBehaviour
         }
 
 
-        Debug.Log("xp:" + IncreaseSpeed.xp + "  speed: " + rb?.MoveSpeed ?? "0");
+        Debug.Log("xp:" + IncreaseXP.xp + "  speed: " + rb?.MoveSpeed ?? "0");
         Debug.Log("SuperSpeed: " + this.togglesuperSpeed);
     }
 }

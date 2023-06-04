@@ -7,16 +7,18 @@ using System.Threading.Tasks;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class IncreaseSpeed : MonoBehaviour
+public class IncreaseXP : MonoBehaviour
 {
     public static float xp = 0f;
 
     private ThirdPersonController rb;
+    private XpText XpText;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<ThirdPersonController>();
+        XpText  = GetComponent<XpText>();
         
     }   
     int delayCount = 0;
@@ -31,6 +33,7 @@ public class IncreaseSpeed : MonoBehaviour
                 delayCount = 0;    
             }
             delayCount +=1;
+            this.XpText.changingText
         }
 
        

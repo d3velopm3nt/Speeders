@@ -22,7 +22,7 @@ public class SonicSpeed : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F) && IncreaseSpeed.xp >= 0)
+        if (Input.GetKeyDown(KeyCode.F) && IncreaseXP.xp >= 0)
         {
             this.togglesonicSpeed = this.togglesonicSpeed ? false : true;
 
