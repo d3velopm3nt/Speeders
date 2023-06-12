@@ -286,7 +286,7 @@ namespace StarterAssets
             }
 
             //Update HUD Speed
-            this.speedText.text =  this._speed.ToString() + "km/ph";
+            this.speedText.text =  this._speed.ToString() + "km/h";
         }
 
         private void JumpAndGravity()
